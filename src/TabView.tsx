@@ -171,7 +171,7 @@ export default class TabView<T extends Route> extends React.Component<
                         lazy={lazy}
                         lazyPreloadDistance={lazyPreloadDistance}
                         navigationState={navigationState}
-                        style={sceneContainerStyle}
+                        style={typeof sceneContainerStyle === 'function' ? sceneContainerStyle(i) : sceneContainerStyle}
                       >
                         {({ loading }) =>
                           loading
